@@ -17,10 +17,14 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
+  subnet_id = var.subnet_id
   tags = {
     Name = "HelloWorld"
   }
 }
 variable "vpc_id" {
+  type = string
+}
+variable "subnet_id" {
   type = string
 }
