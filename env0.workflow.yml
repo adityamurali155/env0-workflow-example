@@ -2,8 +2,8 @@ environments:
   vpc:
     name: 'VPC and Network'
     templateName: 'VPC'
-  db:
-    name: DB
-    templateName: 'DB'
+  vm:
+    name: 'VM'
+    templateName: 'EC2'
     needs:
       - vpc
