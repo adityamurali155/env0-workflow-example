@@ -21,6 +21,6 @@ resource "aws_instance" "web" {
     Name = "Workflow Instance"
   }
 }
-variable "ec2_subnet_id" {
+variable "subnet_id" {
   type = string
 }
