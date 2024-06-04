@@ -18,9 +18,9 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
   tags = {
-    Name = "HelloWorld"
+    Name = "Workflow Instance"
   }
 }
-variable "subnet_id" {
-  default = true
+variable "ec2_subnet_id" {
+  type = string
 }
