@@ -17,16 +17,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
-  subnet_id = data.aws_subnet.selected.id
-  
   tags = {
     Name = "Demo Workflow Instance"
   }
-}
-data "aws_subnet_ids" "default" {
-  value = data.aws_vpc.default.id
-}
-
-data "aws_subnet" "selected" {
-  id = tolist(data.aws_vpc.default.id)[0]
 }
