@@ -1,6 +1,6 @@
 environments:
   vpc:
-    name: 'VPC and Network'
+    name: 'Virtual Network'
     templateName: 'VPC'
   vm:
     name: 'VM'
