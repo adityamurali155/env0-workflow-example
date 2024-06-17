@@ -17,6 +17,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
+  subnet_id = "subnet-018ecbc47ecb1dced"
   tags = {
     Name = "Demo Workflow Instance"
   }
