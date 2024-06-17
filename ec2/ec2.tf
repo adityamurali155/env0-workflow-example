@@ -26,4 +26,5 @@ resource "aws_instance" "web" {
 
 variable "subnet_id" {
   type = string
+  default = true
 }
