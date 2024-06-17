@@ -23,8 +23,9 @@ resource "aws_instance" "web" {
     Name = "Demo Workflow Instance"
   }
 }
-
+variable "vpc_id" {
+  default = true
+}
 variable "subnet_id" {
-  type = string
   default = true
 }
