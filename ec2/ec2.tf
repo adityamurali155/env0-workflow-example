@@ -28,5 +28,5 @@ data "aws_subnet_ids" "default" {
 }
 
 data "aws_subnet" "selected" {
-  id = tolist(data.aws_subnet_ids.default.ids)[0]
+  id = tolist(data.aws_vpc.default.id)[0]
 }
